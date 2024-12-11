@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Plataforma Documental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://w7.pngwing.com/pngs/161/263/png-transparent-leaf-logo-logo-room-icon-leaf-angle-grass-commercial-cleaning-thumbnail.png"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="PlataformaD.css"
+    />
+  </head>
+  <body>
+    <div class="Fondo">
+      <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Usuario</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Ingresa tu usuario"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Ingresa tu contraseña"
+              required
+            />
+          </div>
+          <button type="submit">Iniciar Sesión</button>
+          <p id="error-message" class="error"></p>
+        </form>
+      </div>
+    </div>
+    <script src="PlataformaD.js"></script>
+  </body>
+</html>
