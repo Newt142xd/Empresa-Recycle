@@ -9,7 +9,6 @@ header {
 }
 header .logo {
   width: 280px;
-  height: auto;
 
   margin-right: 80px; /* Agrega espacio entre el logo y el menú */
 }
