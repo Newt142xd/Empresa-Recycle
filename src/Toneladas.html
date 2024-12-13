@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>SOMOS - BRILLANTES LLAN</title>
+    <title>TONELADAS APROVECHADAS - BRILLANTES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="icon"
@@ -13,13 +13,15 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="Conoce mas.css"
+      href="css/Toneladas.css"
     />
   </head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="Js/Toneladas.js"></script>
   <body>
-    <div class="Principal">
+    <div id="Principal">
       <header>
-        <a href="#"><img src="src/image.png" class="logo" /> </a>
+        <a href="#"><img src="Docs/image.png" class="logo" /> </a>
         <nav>
           <ul>
             <li><a href="Inicio.html">Inicio</a></li>
@@ -49,13 +51,19 @@
               <ul>
                 <li><a href="Mapas de rutas.html">Mapas De Rutas</a></li>
                 <li><a href="Uniforme.html">Condiciones Uniformes</a></li>
-                <li><a href="#">Toneladas Aprovechadas</a></li>
+                <li><a href="Toneladas.html">Toneladas Aprovechadas</a></li>
                 <li><a href="#">Metal De Rechazo</a></li>
               </ul>
             </li>
-            <li><a href="#" class="Menu" id="Menu-PQR">PQR Usuarios</a></li>
             <li>
-              <a href="#" class="Menu" id="Menu-inicioSesion">Gestion Social</a>
+              <a href="PQR usuarios.html" class="Menu" id="Menu-PQR"
+                >PQR Usuarios</a
+              >
+            </li>
+            <li>
+              <a href="PlataformaD.html" class="Menu" id="Menu-inicioSesion"
+                >Gestion Social</a
+              >
             </li>
           </ul>
         </nav>
@@ -65,33 +73,12 @@
         <h2 class="Titulo">BRILLANTES</h2>
       </container>
     </div>
-    <section class="Fondo1">
-      <p class="Texto">
-        Somos una empresa con experiencia en la gestión de residuos
-        domiciliarios, especiales y ordinarios que promovemos practicas
-        responsables para el mejoramiento del medio ambiente de nuestra
-        comunidad Contamos con el personal idóneo para el desarrollo de la
-        actividad, con las aptitudes competentes y el carisma humano.
-      </p>
-    </section>
 
-    <section class="Fondo2">
-      <p class="Texto">
-        MISIÓN La Prestación y recolección de residuos sólidos como actividad
-        complementaria de aseo en la ciudad de Villavicencio, y que se reconozca
-        la importancia de los recicladores ya que estos contribuyen a disminuir
-        los impactos que genera la actividad humana, en modo de mejorar la
-        calidad de vida.
-      </p>
-    </section>
-
-    <section class="Fondo3">
-      <p class="Texto1">
-        VISIÓN Expandirnos en la ciudad y en la región para poder prestar un
-        servicio de recolección más eficiente, ampliar nuestra infraestructura y
-        maquinarias con la meta de poder brindar oportunidades laborales más
-        dignas y equitativas para nuestros recicladores asociados.
-      </p>
+    <section class="Fondo">
+      <img
+        class="Grafica"
+        src="Docs/Gráfico de Líneas Para Estadísticas Sencillo Pastel (1).png"
+      />
     </section>
 
     <!-- Footer -->

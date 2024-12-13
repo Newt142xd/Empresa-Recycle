@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex; /* Usamos Flexbox para alinear el logo y el menú */
+  align-items: center; /* Alinea verticalmente */
+  padding: 5px 20px; /* Espaciado interno del encabezado */
+}
+header .logo {
+  width: 280px;
+  height: auto;
+
+  margin-right: 80px; /* Agrega espacio entre el logo y el menú */
+}
+
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0, 7s;
+}
+
+header li:hover {
+  background-color: rgb(8, 78, 78);
+  border-radius: 0px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcfcfcd8;
+  max-height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+
+  justify-content: center;
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+}
+
+nav ul li a {
+  display: block;
+
+  text-decoration: none;
+  padding: 8px 15px; /* Reducimos el padding */
+  color: #030303;
+
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li ul {
+  display: none; /* Ocultar el submenú inicialmente */
+  position: absolute;
+  top: 100%; /* Aparece justo debajo del elemento padre */
+  left: 0;
+  border-radius: 10px;
+  border: 4px solid #11c756; /* Agregamos el borde */
+  font-size: 14px; /* Reducimos el tamaño de fuente */
+  width: 170px; /* Hacemos el submenú más estrecho */
+  background-color: rgb(172, 179, 176);
+}
+
+nav ul li:hover ul {
+  display: grid; /* Mostrar el submenú al pasar el mouse */
+}
+
+nav ul li ul li {
+  display: block;
+}
+
+.Articulo {
+  width: 100%;
+  font-weight: bold;
+
+  display: flex;
+}
+
+.Texto {
+  font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  height: 330px;
+  width: 320px;
+  padding: 40px;
+  margin: auto;
+  margin-left: 48rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(8, 78, 78);
+}
+
+.Titulo {
+  font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  font-size: 40px;
+
+  font-weight: 800;
+  text-shadow: -1px -1px 0 #000,
+    /* Sombra hacia arriba izquierda */ 1px -1px 0 #000,
+    /* Sombra hacia arriba derecha */ -1px 1px 0 #000,
+    /* Sombra hacia abajo izquierda */ 1px 1px 0 #000; /* Sombra hacia abajo derecha */
+  margin-left: 8rem;
+  padding: 1rem;
+  color: rgb(66, 141, 85);
+}
+
+#Principal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://www.cpacific.cl/images/2021/planta-industrial-de-reciclaje1.jpg);
+  width: 100%;
+  font-size: 18px;
+
+  background-size: cover;
+}
+
+.Fondo1 {
+  background-image: url(https://i.pinimg.com/originals/3f/14/c4/3f14c4421a628c3320da197bd6ce6e1e.jpg);
+  height: 450px;
+  width: 100%;
+  font-size: 20px;
+
+  background-size: cover;
+}
+
+.Imagen {
+  max-width: 770px;
+  height: 390px;
+  position: absolute;
+  margin-left: 10rem;
+}
+
+.form-container {
+  background: #ffffff44;
+  font: 1em sans-serif;
+  margin: auto;
+
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  position: relative;
+  color: #000000;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-family: he;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #e9e9e9;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around; /* Espacia las columnas */
+  background-color: #053309;
+  text-align: center;
+  color: white;
+
+  padding: 80px;
+}
+
+.footer div {
+  max-width: 300px;
+}
+
+.footer h3 {
+  margin-top: 0;
+}
+
+.footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
