@@ -98,12 +98,13 @@ nav ul li ul li {
 }
 
 #Principal {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://www.cpacific.cl/images/2021/planta-industrial-de-reciclaje1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.438)),
+    url("../Docs/Principal.jpg");
   width: 100%;
-  font-size: 18px;
 
-  background-size: cover;
+  font-size: 18px;
+  background-size: 70rem; /* Escalar para mostrar todo el contenido */
+  background-position: center; /* Centrar la imagen en el contenedor */
 }
 
 .Articulo {

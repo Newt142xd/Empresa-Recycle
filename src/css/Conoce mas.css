@@ -103,7 +103,8 @@ nav ul li ul li {
   font-weight: 600;
   height: 320px;
   width: 300px;
-  padding: 20px;
+  padding: 40px;
+  margin: 1rem;
   margin-left: 10rem;
 
   color: rgb(255, 255, 255);
@@ -116,8 +117,8 @@ nav ul li ul li {
   font-weight: 600;
   height: 320px;
   width: 300px;
-  padding: 20px;
-
+  padding: 37px;
+  margin: 2rem;
   margin-left: 48rem;
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
@@ -140,28 +141,31 @@ nav ul li ul li {
 
 .Principal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.438)),
-    url(https://www.cpacific.cl/images/2021/planta-industrial-de-reciclaje1.jpg);
+    url("../Docs/Principal.jpg");
   width: 100%;
+
   font-size: 18px;
-  filter: brightness (80%);
-  background-size: cover;
+  background-size: 70rem; /* Escalar para mostrar todo el contenido */
+  background-position: center; /* Centrar la imagen en el contenedor */
 }
 
 .Fondo1 {
   background-image: url(https://img.pikbest.com/wp/202408/grainy-texture-design-abstract-dark-green-background-with-elements_9939554.jpg!w700wp);
-  height: 450px;
+  height: 460px;
   width: 100%;
   font-size: 20px;
-
+  display: grid;
   background-size: cover;
 }
 
 .Fondo2 {
-  background-image: url(https://i.pinimg.com/originals/3f/14/c4/3f14c4421a628c3320da197bd6ce6e1e.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.438)),
+    url(https://i.pinimg.com/originals/3f/14/c4/3f14c4421a628c3320da197bd6ce6e1e.jpg);
   height: 450px;
   width: 100%;
   font-size: 20px;
-  filter: brightness(90%);
+  display: grid;
+
   background-size: cover;
 }
 
@@ -170,9 +174,34 @@ nav ul li ul li {
   height: 450px;
   width: 100%;
   font-size: 20px;
-  filter: brightness(90%);
+  display: grid;
+
   background-size: cover;
 }
+.Imagen {
+  width: 460px;
+  height: 400px;
+  position: absolute;
+  margin: 1rem;
+  margin-left: 43rem;
+}
+
+.Imagen2 {
+  width: 440px;
+  height: 400px;
+  position: absolute;
+  margin: 1rem;
+  margin-left: 43rem;
+}
+
+.Imagen3 {
+  width: 460px;
+  height: 400px;
+  position: absolute;
+  margin: 20px;
+  margin-left: 10rem;
+}
+
 .form-container {
   background: #ffffff44;
   font: 1em sans-serif;

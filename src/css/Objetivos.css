@@ -105,7 +105,7 @@ nav ul li ul li {
   width: 360px;
 
   padding: 20px;
-  margin: auto;
+  margin: 1rem;
   margin-left: 10rem;
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
@@ -128,12 +128,13 @@ nav ul li ul li {
 }
 
 .Principal {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://www.cpacific.cl/images/2021/planta-industrial-de-reciclaje1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.438)),
+    url("../Docs/Principal.jpg");
   width: 100%;
-  font-size: 18px;
 
-  background-size: cover;
+  font-size: 18px;
+  background-size: 70rem; /* Escalar para mostrar todo el contenido */
+  background-position: center; /* Centrar la imagen en el contenedor */
 }
 
 .Fondo1 {
@@ -141,15 +142,16 @@ nav ul li ul li {
   height: 450px;
   width: 100%;
   font-size: 20px;
-
+  display: grid;
   background-size: cover;
 }
 
 .Imagen {
-  max-width: 770px;
-  height: 390px;
+  width: 520px;
+  height: 400px;
   position: absolute;
-  margin-left: 10rem;
+  margin: 20px;
+  margin-left: 42rem;
 }
 
 .form-container {

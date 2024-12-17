@@ -98,11 +98,13 @@ nav ul li ul li {
 }
 
 .Principal {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://www.cpacific.cl/images/2021/planta-industrial-de-reciclaje1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.438)),
+    url("../Docs/Principal.jpg");
   width: 100%;
+
   font-size: 18px;
-  background-size: cover;
+  background-size: 70rem; /* Escalar para mostrar todo el contenido */
+  background-position: center; /* Centrar la imagen en el contenedor */
 }
 
 .Titulo {
@@ -125,21 +127,31 @@ nav ul li ul li {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 800;
   height: 342px;
+  text-align: center;
   width: 320px;
   padding: 40px;
+  margin: 1rem;
   margin-left: 10rem;
-
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
 }
 
 .Fondo {
-  background-image: url(https://i.pinimg.com/originals/3f/14/c4/3f14c4421a628c3320da197bd6ce6e1e.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.171)),
+    url(https://i.pinimg.com/originals/3f/14/c4/3f14c4421a628c3320da197bd6ce6e1e.jpg);
   height: 450px;
   width: 100%;
   font-size: 20px;
-
+  display: flex;
   background-size: cover;
+}
+
+.Imagen {
+  width: 440px;
+  height: 400px;
+  position: absolute;
+  margin: 20px;
+  margin-left: 43rem;
 }
 
 .form-container {

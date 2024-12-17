@@ -141,11 +141,12 @@ nav ul li ul li {
 
 #Principal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.438)),
-    url(https://www.cpacific.cl/images/2021/planta-industrial-de-reciclaje1.jpg);
+    url("../Docs/Principal.jpg");
   width: 100%;
+
   font-size: 18px;
-  filter: brightness (80%);
-  background-size: cover;
+  background-size: 70rem; /* Escalar para mostrar todo el contenido */
+  background-position: center; /* Centrar la imagen en el contenedor */
 }
 
 .button {
@@ -173,11 +174,13 @@ nav ul li ul li {
 }
 
 .imagen1 {
-  background-image: url(https://i.pinimg.com/originals/3f/14/c4/3f14c4421a628c3320da197bd6ce6e1e.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.438)),
+    url(https://i.pinimg.com/originals/3f/14/c4/3f14c4421a628c3320da197bd6ce6e1e.jpg);
   height: 450px;
   width: 100%;
   font-size: 20px;
-  filter: brightness(80%);
+  display: grid;
+  filter: brightness(100%);
   background-size: cover;
 }
 
@@ -189,15 +192,16 @@ nav ul li ul li {
 }
 
 .Imagen3 {
-  max-width: 580px;
-  height: 400px;
+  width: 500px;
+  height: 380px;
   position: fixed;
   margin: 20px;
   margin-left: 43rem;
 }
 
 .Fondo1 {
-  background-image: url(https://arpasa.es/wp-content/uploads/2021/07/lograr-cesped-crezca-sombra0.jpg.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.13)),
+    url(https://arpasa.es/wp-content/uploads/2021/07/lograr-cesped-crezca-sombra0.jpg.webp);
   height: 450px;
   width: 100%;
 
