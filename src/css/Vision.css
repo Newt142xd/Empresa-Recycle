@@ -215,12 +215,15 @@ nav ul li ul li {
 .form-group button:hover {
   background-color: #0056b3;
 }
+
 .footer {
   display: flex;
   justify-content: space-around; /* Espacia las columnas */
-  background-color: #222;
+  background-color: #053309;
+  text-align: center;
   color: white;
-  padding: 80px;
+
+  padding: 40px;
 }
 
 .footer div {

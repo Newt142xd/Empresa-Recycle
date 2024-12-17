@@ -89,6 +89,35 @@ nav ul li ul li {
   display: block;
 }
 
+/* Para tablets y pantallas medianas */
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header {
+    text-align: left;
+
+    padding: 20px;
+  }
+
+  nav ul {
+    text-align: right;
+  }
+}
+
+/* Para pantallas grandes (escritorio) */
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 3 auto;
+  }
+}
+
 .Articulo {
   width: 100%;
   font-weight: bold;
@@ -408,7 +437,7 @@ nav ul li ul li {
   text-align: center;
   color: white;
 
-  padding: 80px;
+  padding: 40px;
 }
 
 .footer div {
