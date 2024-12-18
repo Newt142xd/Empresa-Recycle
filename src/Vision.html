@@ -11,6 +11,7 @@
       media="screen"
       href="css/Vision.css"
     />
+    <script src="Js/Vision.js"></script>
   </head>
   <body>
     <div class="Principal">
@@ -77,6 +78,24 @@
       </p>
       <img class="Imagen" src="../src/Docs/Reciclaje4.jpg" />
     </section>
+
+    <div class="whatsapp-chat-container">
+      <!-- Botón flotante -->
+      <button class="whatsapp-main" onclick="toggleChat()">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+      </button>
+  
+      <!-- Barra lateral -->
+      <div class="whatsapp-sidebar" id="whatsappSidebar">
+          <div class="sidebar-header">
+              <h2>¿Cómo podemos ayudarte?</h2>
+              <button class="close-btn" onclick="toggleChat()">×</button>
+          </div>
+          <div class="sidebar-content">
+              <button class="chat-button" onclick="startChat()">Iniciar chat en WhatsApp</button>
+              <button class="info-button" onclick="showInfo()">Ver información</button>
+          </div>
+      </div>
 
     <!-- Footer -->
     <footer class="footer">
