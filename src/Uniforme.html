@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>CONDICIONES UNIFORMES - BRILLANTES</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -15,7 +15,7 @@
       rel="icon"
       href="https://w7.pngwing.com/pngs/161/263/png-transparent-leaf-logo-logo-room-icon-leaf-angle-grass-commercial-cleaning-thumbnail.png"
     />
-    <script src="main.js"></script>
+    <script src="Js/Uniformes.js"></script>
   </head>
   <body>
     <div id="Principal">
@@ -94,20 +94,48 @@
     <div class="whatsapp-chat-container">
       <!-- Botón flotante -->
       <button class="whatsapp-main" onclick="toggleChat()">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+        />
       </button>
-  
+
       <!-- Barra lateral -->
       <div class="whatsapp-sidebar" id="whatsappSidebar">
-          <div class="sidebar-header">
-              <h2>¿Cómo podemos ayudarte?</h2>
-              <button class="close-btn" onclick="toggleChat()">×</button>
-          </div>
-          <div class="sidebar-content">
-              <button class="chat-button" onclick="startChat()">Iniciar chat en WhatsApp</button>
-              <button class="info-button" onclick="showInfo()">Ver información</button>
-          </div>
+        <div class="sidebar-header">
+          <h2>¿Cómo podemos ayudarte?</h2>
+          <button class="close-btn" onclick="toggleChat()">×</button>
+        </div>
+        <div class="sidebar-content">
+          <button class="chat-button" onclick="startChat()">
+            Iniciar chat en WhatsApp
+          </button>
+          <button class="info-button" onclick="showInfo()">
+            Ver información
+          </button>
+        </div>
       </div>
+
+      <!-- Modal informativo -->
+      <div class="info-modal" id="infoModal">
+        <div class="modal-content">
+          <h2 class="modal-titulo">Información</h2>
+          <p class="modal-texto">
+            Somos una empresa que busca dignificar, incentivar y que se le dé su
+            respectivo valor a la labor de los recicladores de oficio; Les
+            ofrecemos acompañamiento e identificación de sus rutas de
+            recolección, los capacitamos en pro de que sus capacidades para
+            identificar el material sean las más aptas para disminuir el rechazo
+            y les inculcamos el sentido de pertenencia.
+          </p>
+          <p class="modal-texto">
+            Horario de atención : lunes a viernes de 7:30 a 12pm / 2pm a 5pm
+            Sábados de 8am a 12pm
+          </p>
+          <button class="close-modal" onclick="closeInfo()">Cerrar</button>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
