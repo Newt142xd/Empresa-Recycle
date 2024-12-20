@@ -5,17 +5,18 @@
 header {
   display: flex; /* Usamos Flexbox para alinear el logo y el menú */
   align-items: center; /* Alinea verticalmente */
-  padding: 5px 20px; /* Espaciado interno del encabezado */
+  padding: 5px 8px; /* Espaciado interno del encabezado */
 }
 header .logo {
-  width: 280px;
-
-  margin-right: 80px; /* Agrega espacio entre el logo y el menú */
+  width: 200px;
+  margin-right: 20px; /* Espacio entre el logo y el menú */
+  /* Agrega espacio entre el logo y el menú */
 }
 
 header ul {
   position: relative;
   display: flex;
+  margin-top: 0;
 }
 
 header ul li {
@@ -25,7 +26,7 @@ header ul li {
 header ul li a {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 15px;
+  margin: 0 16px;
   text-decoration: none;
   font-weight: 600;
   transition: 0, 7s;
@@ -40,8 +41,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10rem;
   background-color: #fcfcfcd8;
-  max-height: 50px;
+  max-height: 80px;
 }
 
 nav ul {
@@ -95,12 +97,16 @@ nav ul li ul li {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+}
+
+menu li {
+  position: relative;
 }
 
 .menu a {
   display: block;
   padding: 10px;
-  text-align: center;
   text-decoration: none;
   color: #000;
 }
@@ -117,26 +123,50 @@ nav ul li ul li {
   width: 200px;
 }
 
-.menu li:hover > ul {
+.menu li:hover > ul,
+.menu li:focus-within > ul {
   display: block;
+}
+
+.arrow {
+  margin-left: 5px;
 }
 
 .menu-toggle {
   display: none;
   background: none;
   border: none;
+  background-color: #0056b3;
+  padding: 8px;
+  border-radius: 10px;
   font-size: 24px;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
+  .item {
+    flex: 1 1 25%; /* Se ajusta al 25% del ancho del contenedor */
+  }
+
+  .Imagen2 {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 920px) {
   .menu {
-    flex-direction: column;
     display: none;
+    flex-direction: column;
   }
 
   .menu-toggle {
     display: block;
+  }
+
+  .menu.show {
+    display: flex;
   }
 
   .menu ul {
@@ -144,7 +174,8 @@ nav ul li ul li {
     width: 100%;
   }
 
-  .menu li:hover > ul {
+  .menu li:hover > ul,
+  .menu li:focus-within > ul {
     display: none;
   }
 
@@ -152,8 +183,47 @@ nav ul li ul li {
     display: block;
   }
 
-  .menu.show {
-    display: flex;
+  .menu .arrow {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+  }
+
+  .menu .arrow.open {
+    transform: rotate(180deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .Imagen2 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: flex; /* Cambiado de absolute */
+    margin: 0 auto;
+  }
+  .Imagen3 {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    position: relative; /* Cambiado de fixed */
+    margin: 20px auto;
+  }
+  .Texto,
+  .Texto1 {
+    margin: 20px auto;
+    padding: 15px;
+    position: flex;
+    font-size: 0.9em;
+  }
+  .Titulo {
+    margin-left: 0;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+@media (min-width: 600px) {
+  .item {
+    flex: 1 1 50%; /* Se ajusta al 50% del ancho del contenedor */
   }
 }
 
@@ -164,30 +234,57 @@ nav ul li ul li {
   display: flex;
 }
 
+.Articulo {
+  width: 100%;
+  font-weight: bold;
+
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1 1 100%; /* Se ajusta al 100% del ancho del contenedor */
+}
+
+.responsive-article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Cambiado para mejor distribución */
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px; /* Añadido para espaciado uniforme */
+}
+
 .Texto {
   font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
-  height: 300px;
-  width: 340px;
+  height: auto;
+  max-width: 380px;
   padding: 50px;
-  margin: auto;
-  margin-left: 48rem;
+  margin-top: 20px;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-left: 42rem;
 
+  text-align: center;
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
 }
 
 .Texto1 {
-  font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Source Sans Pro, sans-serif;
   font-weight: 600;
-  height: 380px;
-  width: 360px;
-
+  height: auto; /* Cambiado de altura fija */
+  width: 100%;
+  max-width: 360px;
   padding: 20px;
-  margin: auto;
-  margin-left: 10rem;
+  margin: 0 auto; /* Centrado automático */
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
 }
@@ -211,7 +308,7 @@ nav ul li ul li {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.438)),
     url("../Docs/Principal.jpg");
   width: 100%;
-
+  height: auto;
   font-size: 18px;
   background-size: 70rem; /* Escalar para mostrar todo el contenido */
   background-position: center; /* Centrar la imagen en el contenedor */
@@ -248,15 +345,15 @@ nav ul li ul li {
   width: 100%;
   font-size: 20px;
   display: grid;
-  filter: brightness(100%);
+
   background-size: cover;
 }
 
 .Imagen2 {
-  max-width: 770px;
-  height: 390px;
-  position: fixed;
-  margin-left: 10rem;
+  max-width: 80%;
+  height: 370px;
+  position: absolute;
+  margin-left: 6rem;
 }
 
 .Imagen3 {
