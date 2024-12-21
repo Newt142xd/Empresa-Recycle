@@ -56,6 +56,7 @@ nav ul {
 nav ul li {
   position: relative;
   display: inline-block;
+
   color: #fff;
   border-radius: 5px;
 }
@@ -96,6 +97,7 @@ nav ul li ul li {
   padding: 0;
   margin: 0;
   display: flex;
+
   flex-wrap: wrap;
   position: relative;
 }
@@ -138,6 +140,7 @@ menu li {
   border: none;
   background-color: #0056b3;
   padding: 8px;
+  margin-left: 20rem;
   border-radius: 10px;
   font-size: 24px;
   cursor: pointer;
@@ -147,11 +150,22 @@ menu li {
   .item {
     flex: 1 1 25%; /* Se ajusta al 25% del ancho del contenedor */
   }
-
+  .responsive-article {
+    flex-direction: column-reverse; /* Invierte el orden de los elementos */
+    align-items: center;
+  }
+  .Texto {
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: auto;
+    margin-bottom: 20px;
+    order: 2; /* Cambia el orden del texto */
+    width: 90%;
+    max-width: 500px;
+  }
   .Imagen2 {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+    order: 1; /* Cambia el orden de la imagen */
+
+    max-width: 500px;
   }
 }
 
@@ -193,6 +207,7 @@ menu li {
     transform: rotate(180deg);
   }
 }
+
 @media screen and (max-width: 768px) {
   .Imagen2 {
     width: 100%;
@@ -208,12 +223,11 @@ menu li {
     position: relative; /* Cambiado de fixed */
     margin: 20px auto;
   }
-  .Texto,
-  .Texto1 {
-    margin: 20px auto;
-    padding: 15px;
-    position: flex;
+
+  .Texto {
+    padding: 20px;
     font-size: 0.9em;
+    margin: 20px auto;
   }
   .Titulo {
     margin-left: 0;
@@ -271,7 +285,7 @@ menu li {
   font-size: 1em;
   line-height: 1.5;
   margin-left: 42rem;
-
+  display: block;
   text-align: center;
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
@@ -282,9 +296,10 @@ menu li {
   font-weight: 600;
   height: auto; /* Cambiado de altura fija */
   width: 100%;
+
   max-width: 360px;
   padding: 20px;
-  margin: 0 auto; /* Centrado automático */
+  margin: 1re, auto; /* Centrado automático */
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
 }
@@ -292,7 +307,7 @@ menu li {
 .Titulo {
   font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
+  display: block;
   font-size: 30px;
   font-weight: 900;
   text-shadow: -1px -1px 0 #000,
@@ -344,7 +359,7 @@ menu li {
   height: 450px;
   width: 100%;
   font-size: 20px;
-  display: grid;
+  display: flex;
 
   background-size: cover;
 }
@@ -352,6 +367,7 @@ menu li {
 .Imagen2 {
   max-width: 80%;
   height: 370px;
+  margin: 2rem;
   position: absolute;
   margin-left: 6rem;
 }
@@ -361,6 +377,7 @@ menu li {
   height: 380px;
   position: fixed;
   margin: 20px;
+  min-width: 300px;
   margin-left: 43rem;
 }
 
