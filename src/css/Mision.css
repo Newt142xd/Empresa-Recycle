@@ -43,7 +43,7 @@ nav {
   align-items: center;
   margin-left: 10rem;
   background-color: #fcfcfcd8;
-  max-height: 50px;
+  max-height: 80px;
 }
 
 nav ul {
@@ -56,6 +56,7 @@ nav ul {
 nav ul li {
   position: relative;
   display: inline-block;
+
   color: #fff;
   border-radius: 5px;
 }
@@ -91,6 +92,16 @@ nav ul li ul li {
   display: block;
 }
 
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+  flex-wrap: wrap;
+  position: relative;
+}
+
 menu li {
   position: relative;
 }
@@ -106,13 +117,17 @@ menu li {
   display: none;
   position: absolute;
   top: 100%;
-
   left: 0;
   background: #fff;
   list-style: none;
   padding: 0;
   margin: 0;
   width: 200px;
+}
+
+.menu li:hover > ul,
+.menu li:focus-within > ul {
+  display: block;
 }
 
 .arrow {
@@ -123,9 +138,9 @@ menu li {
   display: none;
   background: none;
   border: none;
-  margin-left: 5rem;
   background-color: #0056b3;
   padding: 8px;
+  margin-left: 20rem;
   border-radius: 10px;
   font-size: 24px;
   cursor: pointer;
@@ -139,24 +154,25 @@ menu li {
     flex-direction: column-reverse; /* Invierte el orden de los elementos */
     align-items: center;
   }
-  .Texto {
-    margin-left: 0; /* Elimina el margen izquierdo */
-    margin-right: auto;
-    margin-bottom: 20px;
-    order: 2; /* Cambia el orden del texto */
-    width: 90%;
-    max-width: 500px;
-  }
-  .Imagen2 {
-    order: 1; /* Cambia el orden de la imagen */
 
-    max-width: 500px;
+  .menu {
+    display: contents;
+    padding: 10px;
   }
 }
-
 @media (max-width: 920px) {
+  .Imagen {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  .Texto {
+    width: auto;
+    margin: 1rem;
+    margin-left: 1rem; /* Ajustado el margen en móvil */
+  }
   .menu {
-    display: none;
+    display: contents;
     flex-direction: column;
   }
 
@@ -192,7 +208,6 @@ menu li {
     transform: rotate(180deg);
   }
 }
-
 .Principal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.438)),
     url("../Docs/Principal.jpg");
@@ -216,13 +231,15 @@ menu li {
   font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 800;
-  height: 342px;
-  width: 320px;
-  padding: 40px;
-  margin: 1rem;
-  margin-left: 10rem;
+  width: 100%; /* Cambiado de 320px a 100% */
+  max-width: 300px; /* Ancho máximo para lecturas cómodas */
+  padding: 2rem; /* Cambiado a unidades rem */
+  margin: 1rem auto; /* Centrado horizontal */
   color: rgb(255, 255, 255);
+  margin-left: 7rem;
   background-color: rgb(8, 78, 78);
+  line-height: 1.6; /* Mejor espaciado entre líneas */
+  font-size: clamp(16px, 2.5vw, 20px); /* Texto responsive */
 }
 
 .Titulo {
@@ -242,9 +259,11 @@ menu li {
 
 .Imagen {
   width: 500px;
-  height: 380px;
+  height: auto;
   position: absolute;
-  margin: 20px;
+  display: grid;
+  margin: 2rem;
+  object-fit: cover;
   margin-left: 43rem;
 }
 
