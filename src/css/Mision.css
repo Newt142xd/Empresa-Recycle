@@ -56,7 +56,6 @@ nav ul {
 nav ul li {
   position: relative;
   display: inline-block;
-
   color: #fff;
   border-radius: 5px;
 }
@@ -79,7 +78,7 @@ nav ul li ul {
   left: 0;
   border-radius: 10px;
   border: 4px solid #11c756; /* Agregamos el borde */
-  font-size: 15px; /* Reducimos el tamaño de fuente */
+  font-size: 16px; /* Reducimos el tamaño de fuente */
   width: 170px; /* Hacemos el submenú más estrecho */
   background-color: rgb(172, 179, 176);
 }
@@ -97,7 +96,6 @@ nav ul li ul li {
   padding: 0;
   margin: 0;
   display: flex;
-
   flex-wrap: wrap;
   position: relative;
 }
@@ -117,17 +115,13 @@ menu li {
   display: none;
   position: absolute;
   top: 100%;
+
   left: 0;
   background: #fff;
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 200px;
-}
-
-.menu li:hover > ul,
-.menu li:focus-within > ul {
-  display: block;
+  width: 172px;
 }
 
 .arrow {
@@ -138,12 +132,21 @@ menu li {
   display: none;
   background: none;
   border: none;
+  margin-left: 5rem;
   background-color: #0056b3;
   padding: 8px;
-  margin-left: 20rem;
   border-radius: 10px;
   font-size: 24px;
   cursor: pointer;
+}
+
+.contenedor-flexible {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 1024px) {
@@ -157,19 +160,27 @@ menu li {
 
   .menu {
     display: contents;
-    padding: 10px;
+  }
+
+  .Texto {
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: auto;
+    margin-bottom: 20px;
+    order: 2; /* Cambia el orden del texto */
+    width: 30%;
+    max-width: 300px;
   }
 }
 @media (max-width: 920px) {
   .Imagen {
-    width: 100%;
-    height: auto;
-    margin: 0;
+    width: 90%;
+    margin: 1rem auto;
+    order: 2; /* Mueve la imagen después del texto */
   }
   .Texto {
     width: auto;
     margin: 1rem;
-    margin-left: 1rem; /* Ajustado el margen en móvil */
+    margin-left: 0rem; /* Ajustado el margen en móvil */
   }
   .menu {
     display: contents;
@@ -208,6 +219,126 @@ menu li {
     transform: rotate(180deg);
   }
 }
+
+@media (max-width: 920px) {
+  header {
+    position: relative;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    border-radius: 20px; /* Asegura que el menú se posicione relativo al header */
+    left: 0;
+
+    width: 100%;
+    background-color: #fcfcfcd8;
+    z-index: 1000;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li ul {
+    position: static;
+    width: 100%;
+    border: 4px solid #11c756; /* Agregamos el borde */
+    background-color: #e0e0e0;
+    display: none;
+  }
+  nav ul li:hover ul {
+    display: block;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu.show {
+    display: flex;
+  }
+
+  .Texto {
+    margin-left: auto; /* Elimina el margen izquierdo */
+    margin-right: 10rem;
+
+    order: 2; /* Cambia el orden del texto */
+    width: 35%;
+
+    text-align: center;
+  }
+  .Imagen {
+    max-width: 0%;
+    display: flex;
+    margin-left: 1rem;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-flexible {
+    flex-direction: column;
+  }
+
+  .Titulo {
+    padding: 1px;
+  }
+
+  .Imagen {
+    max-width: 90%;
+    display: flex;
+    margin-left: 1rem;
+    position: relative;
+  }
+
+  .Fondo {
+    height: 840px;
+    padding: 20px;
+  }
+
+  .Texto {
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: auto;
+
+    order: 2; /* Cambia el orden del texto */
+    width: 79%;
+
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .whatsapp-main {
+    bottom: 10px;
+    margin-right: 1rem;
+  }
+
+  .whatsapp-sidebar {
+    width: 90%; /* Ajusta el ancho del sidebar en móviles */
+    right: -100%; /* Lo oculta completamente */
+    margin-top: 15rem;
+  }
+
+  .footer {
+    padding: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-flexible {
+    padding: 10px;
+  }
+
+  .Imagen {
+    width: 95%;
+    margin: 0.5rem auto;
+  }
+
+  .Texto {
+    width: 95%;
+    margin: 0.5rem auto;
+    padding: 1rem;
+  }
+}
+
 .Principal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.438)),
     url("../Docs/Principal.jpg");
@@ -223,16 +354,29 @@ menu li {
   height: 450px;
   width: 100%;
   font-size: 20px;
-  display: grid;
+  display: flex;
   background-size: cover;
+}
+
+.contenedor-flexible {
+  display: f;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .Texto {
   font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
+  flex: 2;
+
   width: 100%; /* Cambiado de 320px a 100% */
-  max-width: 300px; /* Ancho máximo para lecturas cómodas */
+  flex: 1;
+  min-width: 300px;
+
   padding: 2rem; /* Cambiado a unidades rem */
   margin: 1rem auto; /* Centrado horizontal */
   color: rgb(255, 255, 255);
@@ -246,7 +390,7 @@ menu li {
   font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 800;
   text-shadow: -1px -1px 0 #000,
     /* Sombra hacia arriba izquierda */ 1px -1px 0 #000,
@@ -260,11 +404,12 @@ menu li {
 .Imagen {
   width: 500px;
   height: auto;
-  position: absolute;
-  display: grid;
-  margin: 2rem;
+  position: relative;
+
+  margin: 3rem;
+  margin-left: 10rem;
   object-fit: cover;
-  margin-left: 43rem;
+  max-width: 60%;
 }
 
 /* Botón flotante */
