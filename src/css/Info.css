@@ -331,7 +331,7 @@ menu li {
     text-align: center;
   }
   .Imagen {
-    max-width: 0%;
+    max-width: 10%;
     display: flex;
     margin-left: 1rem;
     position: relative;
@@ -371,13 +371,13 @@ menu li {
   }
 
   .whatsapp-main {
-    bottom: 10px;
+    bottom: 20px;
     margin-right: 1rem;
   }
 
   .whatsapp-sidebar {
     width: 90%; /* Ajusta el ancho del sidebar en móviles */
-    right: -100%; /* Lo oculta completamente */
+    right: 100%; /* Lo oculta completamente */
     margin-top: 15rem;
   }
 
