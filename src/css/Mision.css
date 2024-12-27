@@ -463,9 +463,9 @@ menu li {
     position: relative;
   }
 
-  .Fondo1 {
-    height: 840px;
-    padding: 0;
+  .Fondo {
+    height: 720px;
+    padding: 10px;
   }
 
   .Texto {
