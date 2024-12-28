@@ -252,7 +252,7 @@ menu li {
     /* Sombra hacia arriba izquierda */ 1px -1px 0 #000,
     /* Sombra hacia arriba derecha */ -1px 1px 0 #000,
     /* Sombra hacia abajo izquierda */ 1px 1px 0 #000; /* Sombra hacia abajo derecha */
-  margin-left: 8rem;
+  margin-left: 2rem;
   padding: 1rem;
   color: rgb(66, 141, 85);
 }

@@ -145,7 +145,8 @@ menu li {
     flex: 1 1 25%; /* Se ajusta al 25% del ancho del contenedor */
   }
   .responsive-article {
-    gap: 5rem; /* Más espacio en pantallas grandes */
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .menu {
@@ -153,12 +154,16 @@ menu li {
   }
 
   .Texto {
-    width: 70%;
-    padding: 3rem;
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: auto;
+    margin-bottom: 20px;
+    order: 1; /* Cambia el orden del texto */
+    width: 90%;
+    max-width: 500px;
   }
   .Imagen {
-    width: 80%;
-    height: 600px;
+    order: 2;
+    max-width: 500px;
   }
 }
 
@@ -262,7 +267,7 @@ menu li {
 
   .Imagen {
     margin-top: 13rem;
-    max-width: 380px;
+    max-width: 350px;
     display: flex;
   }
 
@@ -275,23 +280,8 @@ menu li {
   .Texto {
     width: 90%;
     padding: 1.5rem;
-    margin: 1rem auto;
-    font-size: 16px;
-  }
-
-  .whatsapp-main {
-    bottom: 20px;
-    margin-right: 1rem;
-  }
-
-  .whatsapp-sidebar {
-    width: 90%; /* Ajusta el ancho del sidebar en móviles */
-    right: 100%; /* Lo oculta completamente */
-    margin-top: 15rem;
-  }
-
-  .footer {
-    padding: 30rem;
+    margin: 2rem auto;
+    font-size: 13px;
   }
 }
 
@@ -319,8 +309,9 @@ menu li {
   display: flex;
 
   align-items: center;
-  padding: 1rem;
-  width: 100%;
+
+  max-width: 100%;
+  height: auto;
   justify-content: space-between; /* Cambiado para mejor distribución */
   flex-wrap: wrap;
 }
@@ -337,7 +328,7 @@ menu li {
     url("../Docs/Principal.jpg");
   width: 100%;
 
-  font-size: 18px;
+  font-size: 20px;
   background-size: 70rem; /* Escalar para mostrar todo el contenido */
   background-position: center; /* Centrar la imagen en el contenedor */
 }
@@ -361,20 +352,19 @@ menu li {
   font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
-
+  position: static;
   font-size: 1em;
-  padding: 2rem;
+  padding: 1rem;
   margin: 0 auto; /* Centrado horizontal */
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
-
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   line-height: 1.6;
   font-size: clamp(16px, 2.5vw, 20px);
-  width: 280px;
+  width: 380px;
   padding: 40px;
-  margin: 1px;
 
+  margin-left: 14rem;
   order: 1;
   font-size: clamp(16px, 2.5vw, 20px);
 
@@ -389,6 +379,7 @@ menu li {
   background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.363)),
     url(https://i.pinimg.com/originals/3f/14/c4/3f14c4421a628c3320da197bd6ce6e1e.jpg);
   height: 450px;
+  width: 100%;
   height: auto;
   font-size: 20px;
   display: grid;
@@ -405,6 +396,55 @@ menu li {
   object-fit: cover;
   margin-right: 15rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-flexible {
+    flex-direction: column;
+  }
+
+  .Titulo {
+    padding: 1px;
+  }
+
+  .Imagen {
+    max-width: 90%;
+    display: flex;
+    order: 2;
+    margin-right: 2rem;
+    position: relative;
+  }
+
+  .Fondo {
+    height: 720px;
+    padding: 0px;
+  }
+
+  .Texto {
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: auto;
+
+    order: 1; /* Cambia el orden del texto */
+    width: 69%;
+
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .whatsapp-main {
+    bottom: 10px;
+    margin-right: 1rem;
+  }
+
+  .whatsapp-sidebar {
+    width: 10%; /* Ajusta el ancho del sidebar en móviles */
+    right: 100%; /* Lo oculta completamente */
+    margin-top: 15rem;
+  }
+
+  .footer {
+    padding: 20rem;
+  }
 }
 
 /* Botón flotante */

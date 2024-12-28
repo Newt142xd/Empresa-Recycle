@@ -219,7 +219,6 @@ menu li {
     top: 70%;
     border-radius: 20px; /* Asegura que el menú se posicione relativo al header */
     left: 0;
-
     width: 100%;
     background-color: #fcfcfcd8;
     z-index: 1000;
