@@ -161,7 +161,7 @@ menu li {
     width: 90%;
     max-width: 500px;
   }
-  .Imagen2 {
+  .Imagen {
     order: 1; /* Cambia el orden de la imagen */
 
     max-width: 500px;
@@ -212,13 +212,15 @@ menu li {
 }
 
 .responsive-article {
-  display: flex;
+  display: grid;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; /* Cambiado para mejor distribución */
-  flex-wrap: wrap;
-  padding: 20px;
-  gap: 20px; /* Añadido para espaciado uniforme */
+  justify-content: space-between;
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .Articulo {
@@ -280,18 +282,18 @@ menu li {
   height: 650px;
   width: 100%;
   font-size: 20px;
-
+  display: grid;
   background-size: cover;
 }
 
-.img {
-  width: 720px;
+.Imagen {
+  max-width: 750px;
   height: 500px;
   margin: 10px;
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: absolute;
-  margin-right: auto;
+  margin-right: 10rem;
 }
 
 .Texto {
@@ -300,9 +302,10 @@ menu li {
   font-weight: 500;
   margin: 10px;
   height: 350px;
+  text-align: center;
   width: 300px;
   padding: 80px;
-
+  position: relative;
   margin-left: 48rem;
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
@@ -382,10 +385,10 @@ menu li {
   }
 
   .Texto {
-    margin-left: 24rem; /* Elimina el margen izquierdo */
+    margin-left: 4rem; /* Elimina el margen izquierdo */
     margin-right: auto;
 
-    order: 3; /* Cambia el orden del texto */
+    order: 2; /* Cambia el orden del texto */
     width: 45%;
 
     text-align: center;
@@ -393,7 +396,7 @@ menu li {
   .Imagen {
     max-width: 10%;
     display: flex;
-    margin-left: 1rem;
+    margin-right: 1rem;
     position: relative;
   }
 }
@@ -408,26 +411,40 @@ menu li {
   }
 
   .Imagen {
-    max-width: 90%;
+    max-width: 94%;
+    height: 23rem;
     display: flex;
-    margin-left: 1rem;
+    margin-right: 10rem;
     position: relative;
   }
 
-  .Fondo1 {
-    height: 840px;
+  .Fondo {
+    height: 1080px;
     padding: 0;
   }
 
   .Texto {
     margin-left: 0; /* Elimina el margen izquierdo */
-    margin-right: auto;
+    margin-right: 10px;
 
+    padding: 39px;
+    margin: 0rem;
     order: 2; /* Cambia el orden del texto */
     width: 79%;
-
+    height: auto;
     text-align: center;
     margin-left: 0;
+  }
+
+  .Button {
+    max-width: 10rem;
+    height: auto;
+
+    padding: 0.7rem 0.5rem;
+    font-size: 14px;
+    margin-right: 0rem;
+    margin-top: 1rem;
+    position: relative;
   }
 
   .whatsapp-main {

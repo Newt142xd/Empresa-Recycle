@@ -285,7 +285,7 @@ menu li {
   }
 
   .Texto {
-    margin-left: 24rem; /* Elimina el margen izquierdo */
+    margin-left: 14rem; /* Elimina el margen izquierdo */
     margin-right: auto;
 
     order: 1; /* Cambia el orden del texto */
@@ -308,19 +308,6 @@ menu li {
 
   .Titulo {
     padding: 1px;
-  }
-
-  .Grafica {
-    max-width: 100%;
-    height: 90%;
-    display: flex;
-    margin-left: 0rem;
-    position: relative;
-  }
-
-  .Fondo1 {
-    height: 340px;
-    padding: 0;
   }
 
   .whatsapp-sidebar {
