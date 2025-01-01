@@ -41,7 +41,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: rem;
+  margin-left: 10rem;
   background-color: #fcfcfcd8;
   max-height: 80px;
 }
@@ -78,7 +78,7 @@ nav ul li ul {
   left: 0;
   border-radius: 10px;
   border: 4px solid #11c756; /* Agregamos el borde */
-  font-size: 15px; /* Reducimos el tamaño de fuente */
+  font-size: 16px; /* Reducimos el tamaño de fuente */
   width: 170px; /* Hacemos el submenú más estrecho */
   background-color: rgb(172, 179, 176);
 }
@@ -89,6 +89,15 @@ nav ul li:hover ul {
 
 nav ul li ul li {
   display: block;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 menu li {
@@ -106,21 +115,13 @@ menu li {
   display: none;
   position: absolute;
   top: 100%;
+
   left: 0;
   background: #fff;
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 200px;
-}
-
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
+  width: 172px;
 }
 
 .arrow {
@@ -131,6 +132,7 @@ menu li {
   display: none;
   background: none;
   border: none;
+  margin-left: 5rem;
   background-color: #0056b3;
   padding: 8px;
   border-radius: 10px;
@@ -299,7 +301,7 @@ menu li {
   flex: 1 1 100%; /* Se ajusta al 100% del ancho del contenedor */
 }
 
-.responsive-article {
+.contenedor-flexible {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -316,25 +318,39 @@ menu li {
   height: auto;
   max-width: 380px;
   padding: 50px;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 1em;
   line-height: 1.5;
   margin-left: 42rem;
-  display: block;
+  position: relative;
   text-align: center;
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
 }
 
 .Texto1 {
-  font-family: Source Sans Pro, sans-serif;
+  font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
-  height: auto; /* Cambiado de altura fija */
-  width: 100%;
+  position: relative;
 
-  max-width: 360px;
-  padding: 20px;
-  margin: 1re, auto; /* Centrado automático */
+  padding: 1rem;
+  margin: 0 auto; /* Centrado horizontal */
+  color: rgb(255, 255, 255);
+  background-color: rgb(8, 78, 78);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  width: 380px;
+  height: auto;
+  padding: 40px;
+
+  margin-right: 53rem;
+  order: 1;
+  font-size: clamp(16px, 2.5vw, 20px);
+
+  text-align: center;
+
+  line-height: 1.6;
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
 }
@@ -400,7 +416,7 @@ menu li {
 }
 
 .Imagen2 {
-  max-width: 80%;
+  width: 30rem;
   height: 370px;
   margin: 2rem;
   position: absolute;
@@ -408,12 +424,14 @@ menu li {
 }
 
 .Imagen3 {
-  width: 500px;
-  height: 380px;
-  position: fixed;
-  margin: 20px;
-  min-width: 300px;
-  margin-left: 43rem;
+  width: 30rem;
+  height: 370px;
+  margin: 2rem;
+  position: absolute;
+
+  object-fit: cover;
+  margin-left: 44rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .Fondo1 {
@@ -421,18 +439,146 @@ menu li {
     url(https://arpasa.es/wp-content/uploads/2021/07/lograr-cesped-crezca-sombra0.jpg.webp);
   height: 450px;
   width: 100%;
-
-  display: flex;
+  height: auto;
   font-size: 20px;
-  filter: brightness(100%);
+  display: grid;
   background-size: cover;
 }
 
 .Fondo2 {
   background-image: url(https://img.freepik.com/fotos-premium/pared-agrietada-fondo-tierra-seca-agrietada_553949-261.jpg?semt=ais_hybrid);
-  display: grid;
+  display: flex;
   height: 450px;
   width: 100%;
+}
+
+@media (max-width: 920px) {
+  header {
+    position: relative;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    border-radius: 20px; /* Asegura que el menú se posicione relativo al header */
+    left: 0;
+
+    width: 100%;
+    background-color: #fcfcfcd8;
+    z-index: 1000;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li ul {
+    position: static;
+    width: 100%;
+    border: 4px solid #11c756; /* Agregamos el borde */
+    background-color: #e0e0e0;
+    display: none;
+  }
+  nav ul li:hover ul {
+    display: block;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu.show {
+    display: flex;
+  }
+
+  .Texto {
+    margin-left: 24rem; /* Elimina el margen izquierdo */
+    margin-right: auto;
+
+    order: 2; /* Cambia el orden del texto */
+    width: 45%;
+
+    text-align: center;
+  }
+
+  .Imagen2 {
+    max-width: 50rem;
+
+    order: 1;
+    margin-left: 1rem;
+    position: relative;
+  }
+
+  .Imagen3 {
+    order: 2; /* La imagen aparecerá después */
+    width: 200%;
+
+    margin: 40px auto;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-flexible {
+    flex-direction: column;
+  }
+
+  .Titulo {
+    padding: 1px;
+  }
+
+  .Imagen2 {
+    max-width: 100%;
+    margin: auto;
+    margin-right: 2rem;
+    position: relative;
+  }
+
+  .imagen1 {
+    height: 870px;
+  }
+
+  .Fondo1 {
+    height: 820px;
+  }
+
+  .Imagen3 {
+    order: 2; /* La imagen aparecerá después */
+    width: 99%;
+    max-width: 350px;
+    margin: 20px auto;
+    position: relative;
+  }
+
+  .Texto {
+    margin-left: 0;
+    margin-right: auto;
+    order: 2; /* Cambia el orden del texto */
+    width: 90%;
+    padding: 24px;
+    margin-top: 1px;
+    text-align: center;
+  }
+
+  .Texto1 {
+    order: 1; /* El texto aparecerá primero */
+    width: 90%;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .whatsapp-main {
+    bottom: 20px;
+    margin-right: 1rem;
+  }
+
+  .whatsapp-sidebar {
+    width: 90%; /* Ajusta el ancho del sidebar en móviles */
+    right: 100%; /* Lo oculta completamente */
+    margin-top: 15rem;
+  }
+
+  .footer {
+    padding: 30rem;
+  }
 }
 
 /* Botón flotante */

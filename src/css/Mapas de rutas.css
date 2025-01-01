@@ -282,7 +282,7 @@ menu li {
   height: 650px;
   width: 100%;
   font-size: 20px;
-  display: grid;
+  display: flex;
   background-size: cover;
 }
 
@@ -394,7 +394,7 @@ menu li {
     text-align: center;
   }
   .Imagen {
-    max-width: 10%;
+    max-width: 95%;
     display: flex;
     margin-right: 1rem;
     position: relative;
@@ -410,16 +410,13 @@ menu li {
     padding: 1px;
   }
 
-  .Imagen {
-    max-width: 94%;
-    height: 23rem;
-    display: flex;
-    margin-right: 10rem;
-    position: relative;
+  .Imagen1 {
+    width: 100%;
+    height: auto;
   }
 
   .Fondo {
-    height: 1080px;
+    height: 1180px;
     padding: 0;
   }
 
