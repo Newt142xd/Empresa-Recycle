@@ -455,15 +455,15 @@ menu li {
   }
 
   .Imagen {
-    max-width: 90%;
+    max-width: 95%;
     display: flex;
     order: 2;
-    margin-left: 1rem;
+
     position: relative;
   }
 
   .Fondo {
-    height: 720px;
+    height: 735px;
     padding: 10px;
   }
 
@@ -472,7 +472,7 @@ menu li {
     margin-right: auto;
 
     order: 1; /* Cambia el orden del texto */
-    width: 79%;
+    width: 80%;
 
     text-align: center;
     margin-left: 0;

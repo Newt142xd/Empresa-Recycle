@@ -501,7 +501,6 @@ menu li {
 
   .Imagen2 {
     max-width: 50rem;
-
     order: 1;
     margin-left: 1rem;
     position: relative;
@@ -510,7 +509,6 @@ menu li {
   .Imagen3 {
     order: 2; /* La imagen aparecerá después */
     width: 200%;
-
     margin: 40px auto;
     position: relative;
   }
@@ -533,7 +531,8 @@ menu li {
   }
 
   .imagen1 {
-    height: 870px;
+    height: 800px;
+    padding: 0;
   }
 
   .Fondo1 {

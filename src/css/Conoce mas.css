@@ -5,18 +5,18 @@
 header {
   display: flex; /* Usamos Flexbox para alinear el logo y el menú */
   align-items: center; /* Alinea verticalmente */
-  padding: 5px 20px; /* Espaciado interno del encabezado */
+  padding: 5px 8px; /* Espaciado interno del encabezado */
 }
 header .logo {
-  width: 280px;
-  height: auto;
-
-  margin-right: 80px; /* Agrega espacio entre el logo y el menú */
+  width: 200px;
+  margin-right: 20px; /* Espacio entre el logo y el menú */
+  /* Agrega espacio entre el logo y el menú */
 }
 
 header ul {
   position: relative;
   display: flex;
+  margin-top: 0;
 }
 
 header ul li {
@@ -26,7 +26,7 @@ header ul li {
 header ul li a {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 15px;
+  margin: 0 16px;
   text-decoration: none;
   font-weight: 600;
   transition: 0, 7s;
@@ -41,8 +41,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10rem;
   background-color: #fcfcfcd8;
-  max-height: 50px;
+  max-height: 80px;
 }
 
 nav ul {
@@ -77,7 +78,7 @@ nav ul li ul {
   left: 0;
   border-radius: 10px;
   border: 4px solid #11c756; /* Agregamos el borde */
-  font-size: 14px; /* Reducimos el tamaño de fuente */
+  font-size: 16px; /* Reducimos el tamaño de fuente */
   width: 170px; /* Hacemos el submenú más estrecho */
   background-color: rgb(172, 179, 176);
 }
@@ -88,6 +89,203 @@ nav ul li:hover ul {
 
 nav ul li ul li {
   display: block;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+menu li {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 172px;
+}
+
+.arrow {
+  margin-left: 5px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  margin-left: 5rem;
+  background-color: #0056b3;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .item {
+    flex: 1 1 25%; /* Se ajusta al 25% del ancho del contenedor */
+  }
+  .responsive-article {
+    flex-direction: column-reverse; /* Invierte el orden de los elementos */
+    align-items: center;
+  }
+  .Texto {
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: auto;
+    margin-bottom: 30rem;
+    order: 2; /* Cambia el orden del texto */
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 920px) {
+  header {
+    position: relative;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    border-radius: 20px; /* Asegura que el menú se posicione relativo al header */
+    left: 0;
+
+    width: 100%;
+    background-color: #fcfcfcd8;
+    z-index: 1000;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li ul {
+    position: static;
+    width: 100%;
+    border: 4px solid #11c756; /* Agregamos el borde */
+    background-color: #e0e0e0;
+    display: none;
+  }
+  nav ul li:hover ul {
+    display: block;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu ul {
+    position: static;
+    width: 100%;
+  }
+
+  .menu li:hover > ul,
+  .menu li:focus-within > ul {
+    display: none;
+  }
+
+  .menu li:focus-within > ul {
+    display: block;
+  }
+
+  .menu .arrow {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+  }
+
+  .menu .arrow.open {
+    transform: rotate(180deg);
+  }
+
+  .Texto {
+    margin-left: 24rem; /* Elimina el margen izquierdo */
+    margin-right: auto;
+
+    order: 1; /* Cambia el orden del texto */
+    width: 45%;
+
+    text-align: center;
+  }
+
+  .Imagen2 {
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    position: flex; /* Cambiado de absolute */
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Imagen2 {
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    position: flex; /* Cambiado de absolute */
+    margin: 0 auto;
+  }
+  .Imagen3 {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    position: relative; /* Cambiado de fixed */
+    margin: 20px auto;
+  }
+
+  .Texto {
+    padding: 20px;
+    font-size: 0.9em;
+    margin: 20px auto;
+  }
+  .Titulo {
+    margin-left: 0;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+@media (min-width: 600px) {
+  .item {
+    flex: 1 1 50%; /* Se ajusta al 50% del ancho del contenedor */
+  }
+}
+
+.contenedor-flexible {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Cambiado para mejor distribución */
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px; /* Añadido para espaciado uniforme */
 }
 
 .Articulo {
@@ -101,12 +299,25 @@ nav ul li ul li {
   font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
-  height: 320px;
-  width: 300px;
-  padding: 40px;
-  margin: 1rem;
-  margin-left: 10rem;
+  position: relative;
 
+  padding: 1rem;
+  margin: 0 auto; /* Centrado horizontal */
+  color: rgb(255, 255, 255);
+  background-color: rgb(8, 78, 78);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  width: 380px;
+  height: auto;
+  padding: 40px;
+
+  margin-right: 53rem;
+  order: 1;
+  font-size: clamp(16px, 2.5vw, 20px);
+
+  text-align: center;
+
+  line-height: 1.6;
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
 }
@@ -154,7 +365,7 @@ nav ul li ul li {
   height: 460px;
   width: 100%;
   font-size: 20px;
-  display: grid;
+  display: flex;
   background-size: cover;
 }
 
@@ -179,11 +390,14 @@ nav ul li ul li {
   background-size: cover;
 }
 .Imagen {
-  width: 460px;
-  height: 400px;
+  width: 30rem;
+  height: 370px;
+  margin: 2rem;
   position: absolute;
-  margin: 1rem;
-  margin-left: 43rem;
+
+  object-fit: cover;
+  margin-left: 44rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .Imagen2 {
@@ -195,11 +409,161 @@ nav ul li ul li {
 }
 
 .Imagen3 {
-  width: 460px;
-  height: 400px;
+  width: 30rem;
+  height: 370px;
+  margin: 2rem;
   position: absolute;
-  margin: 20px;
-  margin-left: 10rem;
+  margin-left: 6rem;
+}
+
+@media (max-width: 920px) {
+  header {
+    position: relative;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    border-radius: 20px; /* Asegura que el menú se posicione relativo al header */
+    left: 0;
+
+    width: 100%;
+    background-color: #fcfcfcd8;
+    z-index: 1000;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li ul {
+    position: static;
+    width: 100%;
+    border: 4px solid #11c756; /* Agregamos el borde */
+    background-color: #e0e0e0;
+    display: none;
+  }
+  nav ul li:hover ul {
+    display: block;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu.show {
+    display: flex;
+  }
+
+  .Texto {
+    margin-left: 24rem; /* Elimina el margen izquierdo */
+    margin-right: auto;
+
+    order: 2; /* Cambia el orden del texto */
+    width: 45%;
+
+    text-align: center;
+  }
+
+  .Imagen {
+    order: 2; /* La imagen aparecerá después */
+    width: 100%;
+    margin: 20px auto;
+    position: relative;
+  }
+
+  .Imagen2 {
+    max-width: 50rem;
+    order: 1;
+    margin-left: 1rem;
+    position: relative;
+  }
+
+  .Imagen3 {
+    order: 2; /* La imagen aparecerá después */
+    width: 200%;
+    margin: 40px auto;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-flexible {
+    flex-direction: column;
+  }
+
+  .Titulo {
+    padding: 1px;
+  }
+
+  .Imagen {
+    order: 2; /* La imagen aparecerá después */
+    width: 100%;
+    margin: 30px auto;
+    margin-right: 8rem;
+    position: relative;
+  }
+
+  .Imagen2 {
+    max-width: 100%;
+    margin: auto;
+    margin-right: 8rem;
+    position: relative;
+  }
+
+  .Fondo1 {
+    height: 770px;
+    padding: 0;
+  }
+
+  .Fondo2 {
+    height: 730px;
+    padding: 0;
+  }
+
+  .Fondo3 {
+    height: 780px;
+    padding: 0;
+  }
+
+  .Imagen3 {
+    max-width: 100%;
+    margin: auto;
+    margin-right: 8rem;
+    position: relative;
+  }
+
+  .Texto {
+    order: 1; /* El texto aparecerá primero */
+    width: 89%;
+    margin: 0 auto;
+    margin-right: 8rem;
+    padding: 24px;
+  }
+
+  .Texto1 {
+    margin-left: 0;
+    margin-right: auto;
+    order: 2; /* Cambia el orden del texto */
+    width: 89%;
+    padding: 24px;
+    margin-top: 2px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .whatsapp-main {
+    bottom: 20px;
+    margin-right: 1rem;
+  }
+
+  .whatsapp-sidebar {
+    width: 90%; /* Ajusta el ancho del sidebar en móviles */
+    right: 100%; /* Lo oculta completamente */
+    margin-top: 15rem;
+  }
+
+  .footer {
+    padding: 30rem;
+  }
 }
 
 /* Botón flotante */
