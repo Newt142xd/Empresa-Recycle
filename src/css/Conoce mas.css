@@ -300,23 +300,18 @@ menu li {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   position: relative;
-
   padding: 1rem;
   margin: 0 auto; /* Centrado horizontal */
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
   width: 380px;
   height: auto;
   padding: 40px;
-
   margin-right: 53rem;
   order: 1;
   font-size: clamp(16px, 2.5vw, 20px);
-
   text-align: center;
-
   line-height: 1.6;
   color: rgb(255, 255, 255);
   background-color: rgb(8, 78, 78);

@@ -375,8 +375,8 @@ menu li {
 }
 
 .Imagen {
-  width: 30rem;
-  height: 340px;
+  width: 500px;
+  height: 400px;
   margin-top: 3rem; /* Espacio adicional arriba de la imagen */
   margin-bottom: 2rem; /* Espacio adicional abajo de la imagen */
   position: relative;

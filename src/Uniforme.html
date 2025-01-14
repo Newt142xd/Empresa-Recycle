@@ -76,12 +76,19 @@
 
     <section class="Fondo">
       <div class="contenedor-flexible">
-        <iframe
-          class="PDF"
-          src="PDF/CCU-Area de prestacion - macro rutas[1].pdf"
-          type="application/pdf"
-          loading="lazy"
-        ></iframe>
+        <object class="PDF" data="tu-archivo.pdf" type="application/pdf">
+          <iframe
+            class="PDF"
+            src="PDF/CCU-Area de prestacion - macro rutas[1].pdf"
+            title="PDF Viewer"
+          >
+            <!-- Mensaje alternativo si no se puede cargar el PDF -->
+            <p>
+              Tu navegador no puede mostrar el PDF.
+              <a href="tu-archivo.pdf">Descárgalo aquí</a>
+            </p>
+          </iframe>
+        </object>
         <p class="Texto">
           Este contrato de condiciones uniformes se regirá por lo dispuesto en
           la Ley 142 de 1994, por sus decretos reglamentarios, por la regulación
